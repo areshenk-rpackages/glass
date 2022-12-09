@@ -19,7 +19,7 @@ CortexPlot3d(data, atlas = schaefer17_400_3d, surf = 'inflated', hemi = 'right',
 
 Alternately, we can create a 2d surface plot of the same variable, facetted by network:
 
-```{r}
+```r
 subnet.data <- subset(data, Network %in% c('VisCent', 'SomMotA', 'DefaultC'))
 CortexPlot2d(subnet.data, atlas = schaefer17_400, fill = 'p', groupby = 'Network', 
              color = 'black', size = .2) +
