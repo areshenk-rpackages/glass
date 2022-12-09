@@ -10,9 +10,9 @@ For example, an interactive 3D surface plot can be generated as follows:
 data <- LoadAtlasInformation('schaefer17_400')
 data$p <- rnorm(nrow(data))
 
-CortexPlot3d(data, atlas = schaefer17_400, surf = 'inflated', hemi = 'right', 
+CortexPlot3d(data, atlas = schaefer17_400_3d, surf = 'inflated', hemi = 'right', 
              fill = 'p', palette = 'r_RdBu', ncolor = 9, limits = NULL, 
-             camera = 'right lateral')
+             camera = 'right lateral', show.legend = FALSE)
 ```
 
 <img src='man/figures/surfplot3d.png' align="center" height="300" />
@@ -24,8 +24,8 @@ subnet.data <- subset(data, Network %in% c('VisCent', 'SomMotA', 'DefaultC'))
 CortexPlot2d(subnet.data, atlas = schaefer17_400, fill = 'p', groupby = 'Network', 
              color = 'black', size = .2) +
     facet_wrap(~ Network, ncol = 1) +
-    scale_fill_gradient2(low = 'blue', mid = 'white', high = 'red', 
-                         midpoint = 0, na.value = grey(.8)) 
+    scale_fill_gradient2(low = 'blue', mid = 'yellow', high = 'red', 
+                         midpoint = 0, na.value = grey(.95)) 
 ```
 
 <img src='man/figures/surfplot2d.png' align="center" height="500" />

@@ -21,6 +21,7 @@
 #' @export
 #'
 #' @import ggseg3d ggseg
+#' @importFrom plotly layout
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom magrittr %>%
 #' @importFrom plyr mapvalues
@@ -48,8 +49,13 @@ CortexPlot3d <- function(data, atlas, surf = 'inflated', hemi = 'right', fill,
     pal <- setNames(seq(limits[1], limits[2], length.out = ncolor), pal)
 
     p <- ggseg3d(.data = data, atlas = atlas, surface = "inflated",
-                 hemisphere = hemi, colour = fill, palette = pal) %>%
+                 hemisphere = hemi, colour = fill, palette = pal, ...) %>%
         pan_camera(camera)
+
+    axt <- list(title = '', showgrid = F,
+                zerolinecolor = "rgb(255,255,255)",
+                ticktext = '', tickvals = '')
+    p <- plotly::layout(p, scene = list(xaxis = axt, yaxis = axt, zaxis = axt))
 
     return(p)
 }
