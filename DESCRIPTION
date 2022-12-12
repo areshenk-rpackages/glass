@@ -1,7 +1,7 @@
 Package: glass
 Type: Package
 Title: Cortical surface maps in R
-Version: 0.1.0
+Version: 0.2.0
 Author: Corson N. Areshenkoff
 Maintainer: Corson N. Areshenkoff <areshenk@protonmail.com>
 Description: Convenience functions for plotting cortical surface maps and parcellations.

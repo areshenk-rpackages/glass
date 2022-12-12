@@ -26,9 +26,9 @@
 #' @importFrom magrittr %>%
 #' @importFrom plyr mapvalues
 
-CortexPlot3d <- function(data, atlas, surf = 'inflated', hemi = 'right', fill,
-                         palette = 'r_RdBu', ncolor = 9, limits = NULL,
-                         camera = 'right lateral', ...) {
+AtlasPlot3d <- function(data, atlas, surf = 'inflated', hemi = 'right', fill,
+                        palette = 'r_RdBu', ncolor = 9, limits = NULL,
+                        camera = 'right lateral', ...) {
 
     # Merge data with atlas
     at <- atlas$ggseg_3d[[which(atlas$surf == surf & atlas$hemi == hemi)]]
