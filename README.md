@@ -15,7 +15,9 @@ AtlasPlot3d(data, atlas = schaefer17_400_3d, surf = 'inflated', hemi = 'right',
             camera = 'right lateral', show.legend = FALSE)
 ```
 
-<img src='man/figures/surfplot3d.png' align="center" height="300" />
+<p align="center">
+<img src='man/figures/surfplot3d.png' height="300" />
+</p>
 
 Alternately, we can create a 2d surface plot of the same variable, facetted by network:
 
@@ -28,7 +30,9 @@ AtlasPlot3d(subnet.data, atlas = schaefer17_400, fill = 'p', groupby = 'Network'
                          midpoint = 0, na.value = grey(.95)) 
 ```
 
-<img src='man/figures/surfplot2d.png' align="center" height="500" />
+<p align="center">
+<img src='man/figures/surfplot2d.png' height="500" />
+</p>
 
 Also included is a 2D cerebellar flatmap modelled after the SUIT atlas.
 
@@ -38,8 +42,9 @@ plot(SUIT28cb) +
     theme(legend.position = 'bottom')
 ```
 
-<img src='man/figures/atlasCB.png' align="center" height="600" />
-
+<p align="center">
+<img src='man/figures/atlasCB.png' height="600" />
+</p>
  
 Implementing this in a way that works with ggseg required a slightly inelegant 
 bit of hacking, which should eventually be improved. Nevertheless, it works well 
@@ -54,4 +59,6 @@ AtlasPlot2d(data, atlas = SUIT28cb, fill = 'p', color = 'black', size = .2) +
                          midpoint = 0, na.value = grey(.95)) 
 ```
 
-<img src='man/figures/surfplotCB.png' align="center" height="300" />
+<p align="center">
+<img src='man/figures/surfplotCB.png' height="300" />
+</p>
