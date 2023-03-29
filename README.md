@@ -23,7 +23,7 @@ Alternately, we can create a 2d surface plot of the same variable, facetted by n
 
 ```r
 subnet.data <- subset(data, Network %in% c('VisCent', 'SomMotA', 'DefaultC'))
-AtlasPlot3d(subnet.data, atlas = schaefer17_400, fill = 'p', groupby = 'Network', 
+AtlasPlot2d(subnet.data, atlas = schaefer17_400, fill = 'p', groupby = 'Network', 
              color = 'black', size = .2) +
     facet_wrap(~ Network, ncol = 1) +
     scale_fill_gradient2(low = 'blue', mid = 'yellow', high = 'red', 
