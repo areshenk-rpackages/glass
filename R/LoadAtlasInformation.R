@@ -14,7 +14,7 @@
 #' @export
 
 LoadAtlasInformation <- function(atlas) {
-    if (!atlas %in% c('schaefer17_400', 'SUIT28cb', 'Subcort14bg'))
+    if (!atlas %in% c('schaefer17_400', 'SUIT28cb', 'Subcort14bg', 'BNA', 'BNAconnectivity'))
         stop(paste('Unrecognized atlas:', atlas))
 
     path <- system.file(paste0('data/atlases/', atlas, '.rds'), package = 'glass')
